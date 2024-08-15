@@ -1,0 +1,30 @@
+﻿@model IEnumerable<StaffManagement.Models.Staff>
+
+<h2>Advanced Search</h2>
+<a href="/Staff/ExportToExcel" class="btn btn-secondary">Export to Excel</a>
+<a href="/Staff/ExportToPDF" class="btn btn-secondary">Export to PDF</a>
+
+<form asp-action="AdvancedSearch" method="post">
+    <div class="form-group">
+        <label>Staff ID</label>
+        <input name="staffId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <select name="gender" class="form-control">
+            <option value="">All</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>From Date</label>
+        <input name="fromDate" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>To Date</label>
+        <input name="toDate" type="date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+

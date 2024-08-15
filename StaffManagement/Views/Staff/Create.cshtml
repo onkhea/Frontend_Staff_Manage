@@ -1,0 +1,26 @@
+﻿@model StaffManagement.Models.Staff
+
+<h2>Create New Staff</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="StaffId"></label>
+        <input asp-for="StaffId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <select asp-for="Gender" class="form-control">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
