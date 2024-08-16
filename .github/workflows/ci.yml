@@ -31,4 +31,4 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Publish API Project
-      run: dotnet publish ./StaffManagement/StaffManagement.csproj --no-build -c Release -o ${{ github.workspace }}/publish
+      run: dotnet publish ./StaffManagement/StaffManagement.csproj -c Release -o ${{ github.workspace }}/publish
